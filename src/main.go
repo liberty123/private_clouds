@@ -2,6 +2,7 @@ package main
 
 import (
 	"github.com/gin-gonic/gin"
+	"disposeImage"
 	"net/http"
 	"log"
 	"fmt"
@@ -9,6 +10,9 @@ import (
 
 func main() {
 	r := gin.Default()
+	a,b := disposeImage.GetConfig()
+	fmt.Println(a)
+	fmt.Println(b)
     r.GET("/ping", func(c *gin.Context) {
         c.JSON(200, gin.H{
             "message": "OK",
@@ -60,5 +64,5 @@ func main() {
 		c.String(http.StatusOK, fmt.Sprintf("%d files upload!", len(files)))
 	})
 
-    r.Run() // 监听并在 0.0.0.0:8080 上启动服务
+    // r.Run() // 监听并在 0.0.0.0:8080 上启动服务
 }

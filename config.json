@@ -1,0 +1,6 @@
+{
+    "imagePath":{
+        "original_image_path": "./original_image",
+        "thumbnail_path": "./thumbnail"
+    }
+}
